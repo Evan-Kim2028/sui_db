@@ -1,5 +1,5 @@
-import { SuiObjectChangeContext, SuiObjectContext, SuiObjectProcessor } from "@sentio/sdk/sui";
-import { MoveValue, SuiObjectChange } from '@mysten/sui/client';
+import { SuiObjectContext, SuiObjectProcessor } from "@sentio/sdk/sui";
+import { MoveValue} from '@mysten/sui/client';
 import util from 'util'; // Import util for detailed logging
 
 const suilendMdrop = '0xef40b6d070de0c55dcb12775e4c438b1d83e0b5f445e95875f46eb2742a5549c';
