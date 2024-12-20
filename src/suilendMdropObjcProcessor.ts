@@ -11,14 +11,14 @@ export function initSuilendMdropProcessor() {
         // startCheckpoint: 6684000n
     })
     .onTimeInterval(async (self, dynamicFieldObjects, ctx: SuiObjectContext) => {
-        console.log("onTimeInterval handler triggered");
+        // console.log("onTimeInterval handler triggered");
 
-        // Log the entire self object using util.inspect for detailed inspection
-        console.log("Self object:", util.inspect(self, { depth: null, colors: true }));
+        // // Log the entire self object using util.inspect for detailed inspection
+        // console.log("Self object:", util.inspect(self, { depth: null, colors: true }));
 
-        // Log dataType and type for verification
-        console.log("Self object dataType:", self.dataType);
-        console.log("Self object type:", self.type);
+        // // Log dataType and type for verification
+        // console.log("Self object dataType:", self.dataType);
+        // console.log("Self object type:", self.type);
 
         // Corrected condition: Check if self.fields exists
         if (self.dataType === 'moveObject' && self.fields) {
@@ -27,7 +27,7 @@ export function initSuilendMdropProcessor() {
                 const fields = self.fields as { [key: string]: MoveValue };
                 const serializedFields = JSON.stringify(fields);
 
-                console.log("Serialized Static Fields:", serializedFields);
+                // console.log("Serialized Static Fields:", serializedFields);
 
                 // Emit the event with serialized fields
                 ctx.eventLogger.emit("suilend_mdrop", {
