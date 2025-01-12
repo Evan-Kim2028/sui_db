@@ -48,9 +48,9 @@ export function initSuilendCapsuleProcessor() {
         startCheckpoint: 35728750n
     })
     .onCheckpointInterval(async (self, _, ctx) => {
-        console.log('Processing SuilendCapsule object:', util.inspect(self, { depth: null }));
-        console.log('Object type:', suilend_capsule.SuilendCapsule.type());
-        console.log('Context:', util.inspect(ctx, { depth: null }));
+        // console.log('Processing SuilendCapsule object:', util.inspect(self, { depth: null }));
+        // console.log('Object type:', suilend_capsule.SuilendCapsule.type());
+        // console.log('Context:', util.inspect(ctx, { depth: null }));
         
         ctx.eventLogger.emit("suilend_capsule_objects", {
             id: self.data_decoded.id,

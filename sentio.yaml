@@ -26,4 +26,9 @@ contracts:
     address: "0x484932c474bf09f002b82e4a57206a6658a0ca6dbdb15896808dcd1929c77820"
   - chain: sui_mainnet
     address: "0xdecf73c062ff5ae5e628d84020a4dafadb45d59befeed2ff36b8e78a0ab889cf"
-    name: kriya_maya
+    name: maya_burn
+  - chain: sui_mainnet
+    address: "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec"
+    name: maya_token
+  - chain: sui_mainnet
+    address: "0x1"

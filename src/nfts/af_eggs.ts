@@ -17,7 +17,7 @@ export function initAfEggProcessor() {
       })
     }, undefined, 4800)
     .onObjectChange((changes: SuiObjectChange[], ctx: SuiObjectChangeContext) => {
-      processObjectChanges(changes, ctx);
+      processObjectChanges(changes, ctx, "af_egg_object_changes");
     });
   }
   

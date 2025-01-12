@@ -10,7 +10,7 @@ import { initMayaProcessor } from "./kriya/mayaProcessor.js";
 initMayaProcessor();
 initSuilendMdropProcessor();
 initRootletProcessor();
-initAfEggProcessor();
+// initAfEggProcessor();
 initSuilendMdropPackageProcessor();
 initSuilendCapsuleProcessor();
 initSuilendPointsProcessor();

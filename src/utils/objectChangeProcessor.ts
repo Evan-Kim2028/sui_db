@@ -27,15 +27,15 @@ export function processObjectChanges(
     });
     
     if (change.type === 'transferred' || change.type === 'mutated' || change.type === 'created') {
-      console.log('Processing change:', {
-        digest: change.digest, // NOTE 1/3/25: the digest is wrong. There is another column called transaction_hash that gets automatically added on later that is the correct digest.
-        objectId: change.objectId,
-        objectType: change.objectType,
-        owner: change.type === 'transferred' ? change.recipient : change.owner,
-        type: change.type,
-        sender: change.sender,
-        version: change.version,
-      });
+      // console.log('Processing change:', {
+      //   digest: change.digest, // NOTE 1/3/25: the digest is wrong. There is another column called transaction_hash that gets automatically added on later that is the correct digest.
+      //   objectId: change.objectId,
+      //   objectType: change.objectType,
+      //   owner: change.type === 'transferred' ? change.recipient : change.owner,
+      //   type: change.type,
+      //   sender: change.sender,
+      //   version: change.version,
+      // });
       
       ctx.eventLogger.emit(eventName, {
         digest: change.digest,

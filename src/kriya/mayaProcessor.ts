@@ -1,9 +1,9 @@
-import { actions } from "../types/sui/kriya_maya.js";
+import { actions } from "../types/sui/maya_burn.js";
 
 export function initMayaProcessor() {
     actions.bind({})
     .onEventClaimEvent((event, ctx) => {
-        ctx.eventLogger.emit("maya_burned", {
+        ctx.eventLogger.emit("maya_claimed", {
             pfp_id: event.data_decoded.pfp_id,
             pfp_number: event.data_decoded.pfp_number,
             minted_by: event.data_decoded.minted_by,

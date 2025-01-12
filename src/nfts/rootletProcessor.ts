@@ -25,7 +25,7 @@ export function initRootletProcessor() {
     }, undefined, 4800, fetchConfig)
     // get object changes for rootlets for mutation and transfers
     .onObjectChange((changes: SuiObjectChange[], ctx: SuiObjectChangeContext) => {
-      processObjectChanges(changes, ctx);
+      processObjectChanges(changes, ctx, "rootlet_object_changes");
     });
   }
   

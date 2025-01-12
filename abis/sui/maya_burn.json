@@ -1,0 +1,7176 @@
+{
+  "actions": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "actions",
+    "friends": [],
+    "structs": {
+      "ClaimEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "pfp_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "pfp_number",
+            "type": "U64"
+          },
+          {
+            "name": "minted_by",
+            "type": "Address"
+          },
+          {
+            "name": "net_maya_burnt",
+            "type": "U64"
+          },
+          {
+            "name": "boost_amount",
+            "type": "U64"
+          },
+          {
+            "name": "old_rank",
+            "type": "U64"
+          },
+          {
+            "name": "new_rank",
+            "type": "U64"
+          },
+          {
+            "name": "timestamp",
+            "type": "U64"
+          }
+        ]
+      },
+      "MintEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "pfp_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "pfp_number",
+            "type": "U64"
+          },
+          {
+            "name": "minted_by",
+            "type": "Address"
+          },
+          {
+            "name": "payment",
+            "type": "U64"
+          },
+          {
+            "name": "referral_code",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "ReferEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "pfp_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "pfp_number",
+            "type": "U64"
+          },
+          {
+            "name": "minted_by",
+            "type": "Address"
+          },
+          {
+            "name": "code",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "UserDataReadOnly": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "chakra_number",
+            "type": "U64"
+          },
+          {
+            "name": "owner",
+            "type": "Address"
+          },
+          {
+            "name": "s1_alloc",
+            "type": "U64"
+          },
+          {
+            "name": "s2_alloc",
+            "type": "U64"
+          },
+          {
+            "name": "maya_burnt",
+            "type": "U64"
+          },
+          {
+            "name": "referral_code",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "referral_used",
+            "type": "U64"
+          },
+          {
+            "name": "rank",
+            "type": "U64"
+          },
+          {
+            "name": "is_whale_whitelisted",
+            "type": "Bool"
+          },
+          {
+            "name": "boost_multiplier",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "claim_maya": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                    "module": "maya",
+                    "name": "MAYA",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "claim_referral_bonus": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                    "module": "maya",
+                    "name": "MAYA",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "get_user_data": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "actions",
+              "name": "UserDataReadOnly",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "mint_basic": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "mint_by_code": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "mint_retro": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "refer": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "set_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "update_retro_allo": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "upgrade_major": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "upgrade_minor": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": []
+      }
+    }
+  },
+  "admin": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "admin",
+    "friends": [],
+    "structs": {
+      "AdminCap": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "MintCap": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "new_mint_cap": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "big_vector": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "big_vector",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "leaderboard"
+      }
+    ],
+    "structs": {
+      "BigVector": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": [
+                "Store"
+              ]
+            },
+            "isPhantom": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "depth",
+            "type": "U8"
+          },
+          {
+            "name": "length",
+            "type": "U64"
+          },
+          {
+            "name": "max_slice_size",
+            "type": "U64"
+          },
+          {
+            "name": "max_fan_out",
+            "type": "U64"
+          },
+          {
+            "name": "root_id",
+            "type": "U64"
+          },
+          {
+            "name": "last_id",
+            "type": "U64"
+          }
+        ]
+      },
+      "Slice": {
+        "abilities": {
+          "abilities": [
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": [
+                "Store"
+              ]
+            },
+            "isPhantom": false
+          }
+        ],
+        "fields": [
+          {
+            "name": "prev",
+            "type": "U64"
+          },
+          {
+            "name": "next",
+            "type": "U64"
+          },
+          {
+            "name": "keys",
+            "type": {
+              "Vector": "U128"
+            }
+          },
+          {
+            "name": "vals",
+            "type": {
+              "Vector": {
+                "TypeParameter": 0
+              }
+            }
+          },
+          {
+            "name": "size",
+            "type": "U64"
+          }
+        ]
+      },
+      "SliceRef": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "ix",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "borrow": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "borrow_mut": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "MutableReference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "borrow_slice": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "borrow_slice_internal": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  "U64"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "borrow_slice_mut": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "create_slice_ref": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "depth": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U8"
+        ]
+      },
+      "destroy_empty": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "BigVector",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ],
+        "return": []
+      },
+      "empty": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          "U64",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "BigVector",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "find_key_at_rank": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U128",
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "find_rank": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          "U64",
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "inorder_values": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Copy",
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Vector": {
+              "Vector": {
+                "TypeParameter": 0
+              }
+            }
+          }
+        ]
+      },
+      "insert": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128",
+          {
+            "TypeParameter": 0
+          }
+        ],
+        "return": []
+      },
+      "is_empty": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "length": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "max_slice": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "max_slice_size": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "min_slice": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "next_slice": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "prev_slice": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "remove": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "TypeParameter": 0
+          }
+        ]
+      },
+      "remove_batch": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Vector": "U128"
+          }
+        ],
+        "return": [
+          {
+            "Vector": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "root_id": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "safe_borrow_size": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "size": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "slice_around": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "slice_before": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "slice_bisect_right": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "slice_borrow": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "slice_borrow_mut": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "MutableReference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "slice_following": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U128"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ]
+      },
+      "slice_is_leaf": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "slice_is_null": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "SliceRef",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "slice_key": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U128"
+        ]
+      },
+      "slice_length": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "slice_next": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "slice_prev": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "booster_pool": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "booster_pool",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "actions"
+      }
+    ],
+    "structs": {
+      "BoosterPool": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "maya_balance",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                      "module": "maya",
+                      "name": "MAYA",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "burnt_maya_balance",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                      "module": "maya",
+                      "name": "MAYA",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "last_refill_timestamp",
+            "type": "U64"
+          },
+          {
+            "name": "total_refill",
+            "type": "U64"
+          }
+        ]
+      },
+      "TopUpEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "sender",
+            "type": "Address"
+          },
+          {
+            "name": "amount",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "burn_maya": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                    "module": "maya",
+                    "name": "MAYA",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "burnt_maya_balance": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "calc_bonus": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U64",
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "last_refill_timestamp": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "maya_balance": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "take_bonus": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                    "module": "maya",
+                    "name": "MAYA",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "top_up": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x3bf0aeb7b9698b18ec7937290a5701088fcd5d43ad11a2564b074d022a6d71ec",
+                    "module": "maya",
+                    "name": "MAYA",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "total_refill": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "booster_pool",
+                "name": "BoosterPool",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      }
+    }
+  },
+  "chakra_nft": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "chakra_nft",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "actions"
+      },
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "leaderboard"
+      }
+    ],
+    "structs": {
+      "BatchBoostUpdateEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "boost_category",
+            "type": "U8"
+          },
+          {
+            "name": "is_added",
+            "type": "Bool"
+          },
+          {
+            "name": "updated_addresses",
+            "type": {
+              "Vector": "Address"
+            }
+          }
+        ]
+      },
+      "CHAKRA_NFT": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      },
+      "ChakraNFT": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "number",
+            "type": "U64"
+          },
+          {
+            "name": "minted_by",
+            "type": "Address"
+          },
+          {
+            "name": "s1_alloc",
+            "type": "U64"
+          },
+          {
+            "name": "s2_alloc",
+            "type": "U64"
+          },
+          {
+            "name": "referral_codes",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "referee_code",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "maya_burnt",
+            "type": "U64"
+          }
+        ]
+      },
+      "GlobalConfig": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "status",
+            "type": "Bool"
+          },
+          {
+            "name": "payments",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "sui",
+                      "name": "SUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "base_price",
+            "type": "U64"
+          },
+          {
+            "name": "referral_price",
+            "type": "U64"
+          },
+          {
+            "name": "max_codes_per_acc",
+            "type": "U64"
+          },
+          {
+            "name": "max_codes_per_whale",
+            "type": "U64"
+          },
+          {
+            "name": "user_to_nft",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "object",
+                      "name": "ID",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "nft_to_user",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "object",
+                      "name": "ID",
+                      "typeArguments": []
+                    }
+                  },
+                  "Address"
+                ]
+              }
+            }
+          },
+          {
+            "name": "referral_codes",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x1",
+                      "module": "string",
+                      "name": "String",
+                      "typeArguments": []
+                    }
+                  },
+                  {
+                    "Struct": {
+                      "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                      "module": "chakra_nft",
+                      "name": "ReferralInfo",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "whale_refferal_wl",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_a_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_b_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_c_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_d_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_e_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_f_whitelists",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  "Bool"
+                ]
+              }
+            }
+          },
+          {
+            "name": "boost_a",
+            "type": "U64"
+          },
+          {
+            "name": "boost_b",
+            "type": "U64"
+          },
+          {
+            "name": "boost_c",
+            "type": "U64"
+          },
+          {
+            "name": "boost_d",
+            "type": "U64"
+          },
+          {
+            "name": "boost_e",
+            "type": "U64"
+          },
+          {
+            "name": "boost_f",
+            "type": "U64"
+          },
+          {
+            "name": "count",
+            "type": "U64"
+          },
+          {
+            "name": "bonus_percentage_per_claim",
+            "type": "U64"
+          },
+          {
+            "name": "max_bonus_per_claim",
+            "type": "U64"
+          },
+          {
+            "name": "referral_bonus_percentage",
+            "type": "U64"
+          },
+          {
+            "name": "used_referral_count",
+            "type": "U64"
+          },
+          {
+            "name": "total_maya_burnt",
+            "type": "U64"
+          },
+          {
+            "name": "version",
+            "type": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "ReferralInfo": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "total_earned",
+            "type": "U64"
+          },
+          {
+            "name": "claimable",
+            "type": "U64"
+          },
+          {
+            "name": "remaining_uses",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "add_maya_burnt": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": []
+      },
+      "add_payment": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "return": []
+      },
+      "add_referral_code": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_add_whale_refferal_wl": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_overwrite_referral_claimable": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_overwrite_referral_uses": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_remove_whale_refferal_wl": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_base_price": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_bonus_percentage_per_claim": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_a": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_b": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_c": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_d": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_e": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_boost_f": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_display_url": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "display",
+                "name": "Display",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                      "module": "chakra_nft",
+                      "name": "ChakraNFT",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_max_bonus_per_claim": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_referral_bonus_percentage": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_referral_price": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_refferal_limit_per_acc": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_refferal_limit_per_whale": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_status": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "Bool",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "base_price": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "batch_update_a": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "batch_update_b": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "batch_update_c": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "batch_update_d": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "batch_update_e": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "batch_update_f": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "Bool",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "bonus_percentage_per_claim": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      },
+      "boost_a": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "boost_b": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "boost_c": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "boost_d": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "boost_e": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "boost_f": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "count": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "create": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "create_unsafe": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          "U64",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "get_user_by_nftId": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "object",
+              "name": "ID",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "id": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "object",
+              "name": "ID",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "increment_claimable_from_referral": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": []
+      },
+      "increment_used_referral_count": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "is_a_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_b_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_c_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_code_available": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_d_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_e_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_f_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_whale_whitelisted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "max_bonus_per_claim": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "max_codes_per_acc": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "max_codes_per_whale": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "maya_burnt": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "minted_by": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "number": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "referee_code": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "referral_bonus_percentage": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      },
+      "referral_code": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "referral_info": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          "U64",
+          "U64",
+          "U64"
+        ]
+      },
+      "referral_price": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "register": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "object",
+              "name": "ID",
+              "typeArguments": []
+            }
+          },
+          "Address"
+        ],
+        "return": []
+      },
+      "remaining_referrals": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          "U64",
+          "Bool"
+        ]
+      },
+      "reset_claimable_from_referral": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "s_alloc": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      },
+      "status": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "take_payment": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "total_maya_burnt": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "total_referral_entries_count": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "transfer": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "chakra_nft",
+              "name": "ChakraNFT",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "update_s_alloc": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "use_referral_code": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "string",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "used_referral_count": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "version_mut": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "current_version": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "current_version",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {
+      "current_major_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      },
+      "current_minor_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      }
+    }
+  },
+  "leaderboard": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "leaderboard",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "actions"
+      }
+    ],
+    "structs": {
+      "ChakraItem": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "chakra_number",
+            "type": "U64"
+          },
+          {
+            "name": "points",
+            "type": "U64"
+          },
+          {
+            "name": "nft_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "ChakraItemReadOnly": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "chakra_number",
+            "type": "U64"
+          },
+          {
+            "name": "points",
+            "type": "U64"
+          },
+          {
+            "name": "nft_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "user",
+            "type": "Address"
+          }
+        ]
+      },
+      "ChakraTierRange": {
+        "abilities": {
+          "abilities": [
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "lower_bound",
+            "type": "U64"
+          },
+          {
+            "name": "upper_bound",
+            "type": "U64"
+          },
+          {
+            "name": "chakra_tier",
+            "type": "U8"
+          },
+          {
+            "name": "search_rank",
+            "type": "U64"
+          },
+          {
+            "name": "chakra_item",
+            "type": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "ChakraItemReadOnly",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "Config": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "total_users",
+            "type": "U64"
+          },
+          {
+            "name": "level_7",
+            "type": "U8"
+          },
+          {
+            "name": "level_6",
+            "type": "U8"
+          },
+          {
+            "name": "level_5",
+            "type": "U8"
+          },
+          {
+            "name": "level_4",
+            "type": "U8"
+          },
+          {
+            "name": "level_3",
+            "type": "U8"
+          },
+          {
+            "name": "level_2",
+            "type": "U8"
+          },
+          {
+            "name": "level_1",
+            "type": "U8"
+          }
+        ]
+      },
+      "Leaderboard": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "data",
+            "type": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "BigVector",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                      "module": "leaderboard",
+                      "name": "ChakraItem",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "config",
+            "type": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Config",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "is_initialized",
+            "type": "Bool"
+          },
+          {
+            "name": "is_frozen",
+            "type": "Bool"
+          }
+        ]
+      },
+      "OrderPage": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "orders",
+            "type": {
+              "Vector": {
+                "Struct": {
+                  "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                  "module": "leaderboard",
+                  "name": "ChakraItemReadOnly",
+                  "typeArguments": []
+                }
+              }
+            }
+          },
+          {
+            "name": "has_next_page",
+            "type": "Bool"
+          },
+          {
+            "name": "next_ref",
+            "type": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "SliceRef",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "offset",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "add": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_add": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "object",
+              "name": "ID",
+              "typeArguments": []
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "admin_freeze_leaderboard": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_remove": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "admin_remove_ver": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_1": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_2": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_3": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_4": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_5": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_6": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_level_7": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "admin_set_ver": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "borrow_internal_slice": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  "U64"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "borrow_slice": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "big_vector",
+                "name": "Slice",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                      "module": "leaderboard",
+                      "name": "ChakraItem",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "count": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "create_new": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U8",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "exists": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "find_points_at_rank": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U64",
+          "U64",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "ChakraItem",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "find_points_at_rank_brute": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      },
+      "find_rank": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "find_rank_brute": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "find_rank_with_item": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": [
+          "U64",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "ChakraItem",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "get_tierwise_distribution": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Vector": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "ChakraTierRange",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "inorder_values": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Vector": {
+              "Vector": {
+                "Struct": {
+                  "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                  "module": "leaderboard",
+                  "name": "ChakraItem",
+                  "typeArguments": []
+                }
+              }
+            }
+          }
+        ]
+      },
+      "is_frozen": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_initialized": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "page_offset": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "OrderPage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "page_slice_ref": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "OrderPage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "big_vector",
+              "name": "SliceRef",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "query": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "GlobalConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "option",
+              "name": "Option",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                    "module": "big_vector",
+                    "name": "SliceRef",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "option",
+              "name": "Option",
+              "typeArguments": [
+                "U64"
+              ]
+            }
+          },
+          "Bool",
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "leaderboard",
+              "name": "OrderPage",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "remove": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "chakra_nft",
+                "name": "ChakraNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "root_id": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "leaderboard",
+                "name": "Leaderboard",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      }
+    }
+  },
+  "retro": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "retro",
+    "friends": [],
+    "structs": {
+      "RetroUserInfo": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "s1_alloc",
+            "type": "U64"
+          },
+          {
+            "name": "s2_alloc",
+            "type": "U64"
+          }
+        ]
+      },
+      "RetroUsersList": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "users",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "Address",
+                  {
+                    "Struct": {
+                      "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                      "module": "retro",
+                      "name": "RetroUserInfo",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "add_user": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "admin",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "assert_exists": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": []
+      },
+      "assert_not_exists": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": []
+      },
+      "exists": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "get_user_info": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "retro",
+                "name": "RetroUsersList",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      }
+    }
+  },
+  "utils": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "utils",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "big_vector"
+      },
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "leaderboard"
+      }
+    ],
+    "structs": {},
+    "exposedFunctions": {
+      "decode_chakra_id": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U128"
+        ],
+        "return": [
+          "U64",
+          "U64"
+        ]
+      },
+      "encode_chakra_id": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U64",
+          "U64"
+        ],
+        "return": [
+          "U128"
+        ]
+      },
+      "pop_n": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Vector": {
+                "TypeParameter": 0
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Vector": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "pop_until": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Vector": {
+                "TypeParameter": 0
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Vector": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      }
+    }
+  },
+  "version": {
+    "fileFormatVersion": 6,
+    "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+    "name": "version",
+    "friends": [
+      {
+        "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+        "name": "chakra_nft"
+      }
+    ],
+    "structs": {
+      "Version": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "major_version",
+            "type": "U64"
+          },
+          {
+            "name": "minor_version",
+            "type": "U64"
+          }
+        ]
+      },
+      "VersionCap": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "assert_v": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "is_supported_major_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_supported_minor_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "new": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+              "module": "version",
+              "name": "Version",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "upgrade_major": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "upgrade_minor": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "VersionCap",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "value_major": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "value_minor": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x66f3283a3a4ed92aa4de92a3105f90dc1dd07921a43585785b206d9d708a3193",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      }
+    }
+  }
+}

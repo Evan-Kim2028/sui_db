@@ -44,15 +44,15 @@ export function initSuilendMdropProcessor() {
             console.log("Self object is not a moveObject or lacks 'fields'");
         }
 
-        // Optionally, log dynamic fields if needed
-        if (dynamicFieldObjects.length > 0) {
-            console.log(`Found ${dynamicFieldObjects.length} dynamic field objects`);
-            dynamicFieldObjects.forEach((field, index) => {
-                console.log(`Dynamic Field ${index + 1}:`, JSON.stringify(field, null, 2));
-            });
-        } else {
-            console.log("No dynamic field objects found");
-        }
+        // // Optionally, log dynamic fields if needed
+        // if (dynamicFieldObjects.length > 0) {
+        //     console.log(`Found ${dynamicFieldObjects.length} dynamic field objects`);
+        //     dynamicFieldObjects.forEach((field, index) => {
+        //         console.log(`Dynamic Field ${index + 1}:`, JSON.stringify(field, null, 2));
+        //     });
+        // } else {
+        //     console.log("No dynamic field objects found");
+        // }
     })
 }
 
