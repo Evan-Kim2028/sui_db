@@ -1,10 +1,29 @@
 project: sui_db
 contracts:
   - chain: sui_mainnet
+    name: suilend_mtoken
     address: "0xbf51eb45d2b4faf7f9cda88433760dc65c6ac98bded0b0d30aeb696c74251ad3"
   - chain: sui_mainnet
+    name: suilend_capsule_processor
     address: "0xf4e0686b311e9b9d6da7e61fc42dae4254828f5ee3ded8ab5480ecd27e46ff08"
   - chain: sui_mainnet
+    name: suilend_point_object
     address: "0x34fe4f3c9e450fed4d0a3c587ed842eec5313c30c3cc3c0841247c49425e246b"
   - chain: sui_mainnet
+    name: suilend_capsule_object
     address: "0x008a7e85138643db888096f2db04766d549ca496583e41c3a683c6e1539a64ac"
+  - chain: sui_mainnet
+    name: suiba_nft
+    address: "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f"
+  - chain: sui_mainnet
+    name: tradeport_marketplace
+    address: "0x33a9e4a3089d911c2a2bf16157a1d6a4a8cbd9a2106a98ecbaefe6ed370d7a25"
+  - chain: sui_mainnet
+    name: rootlet_nft
+    address: "0x8f74a7d632191e29956df3843404f22d27bd84d92cca1b1abde621d033098769"
+  - chain: sui_mainnet
+    name: aftermath_egg_nft
+    address: "0x484932c474bf09f002b82e4a57206a6658a0ca6dbdb15896808dcd1929c77820"
+  - chain: sui_mainnet
+    address: "0xdecf73c062ff5ae5e628d84020a4dafadb45d59befeed2ff36b8e78a0ab889cf"
+    name: kriya_maya

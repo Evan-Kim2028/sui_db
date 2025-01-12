@@ -1,4 +1,4 @@
-import { mtoken } from "./types/sui/0xbf51eb45d2b4faf7f9cda88433760dc65c6ac98bded0b0d30aeb696c74251ad3.js";
+import { mtoken } from "../types/sui/mtoken.js";
 
 export function initSuilendMdropPackageProcessor() {
     mtoken.bind({})

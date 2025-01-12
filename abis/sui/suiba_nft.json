@@ -1,0 +1,1284 @@
+{
+  "suiba_nft": {
+    "fileFormatVersion": 6,
+    "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+    "name": "suiba_nft",
+    "friends": [],
+    "structs": {
+      "AdminCap": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "NFTMinted": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "nft_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "suiba_id",
+            "type": "U64"
+          },
+          {
+            "name": "minter",
+            "type": "Address"
+          }
+        ]
+      },
+      "PriceUpdated": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "new_price",
+            "type": "U64"
+          }
+        ]
+      },
+      "SUIBA_NFT": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      },
+      "SuibaCollection": {
+        "abilities": {
+          "abilities": [
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "minted",
+            "type": "U64"
+          },
+          {
+            "name": "ticket_minted",
+            "type": "U64"
+          },
+          {
+            "name": "public_minted",
+            "type": "U64"
+          },
+          {
+            "name": "available_ids",
+            "type": {
+              "Vector": "U64"
+            }
+          },
+          {
+            "name": "preset_attributes",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "U64",
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "vec_map",
+                      "name": "VecMap",
+                      "typeArguments": [
+                        {
+                          "Struct": {
+                            "address": "0x1",
+                            "module": "string",
+                            "name": "String",
+                            "typeArguments": []
+                          }
+                        },
+                        {
+                          "Struct": {
+                            "address": "0x1",
+                            "module": "string",
+                            "name": "String",
+                            "typeArguments": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "preset_urls",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "table",
+                "name": "Table",
+                "typeArguments": [
+                  "U64",
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "url",
+                      "name": "Url",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "minting_start",
+            "type": "U64"
+          }
+        ]
+      },
+      "SuibaNFT": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "description",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "image_url",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "url",
+                "name": "Url",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "attributes",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "vec_map",
+                "name": "VecMap",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x1",
+                      "module": "string",
+                      "name": "String",
+                      "typeArguments": []
+                    }
+                  },
+                  {
+                    "Struct": {
+                      "address": "0x1",
+                      "module": "string",
+                      "name": "String",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "nft_id",
+            "type": "U64"
+          }
+        ]
+      },
+      "SuibaTicket": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "expiration",
+            "type": "U64"
+          }
+        ]
+      },
+      "TicketCreated": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "ticket_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "recipient",
+            "type": "Address"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "add_more_tickets": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "Vector": "Address"
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "burn_nft": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+              "module": "suiba_nft",
+              "name": "SuibaNFT",
+              "typeArguments": []
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "create_and_airdrop_tickets": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "Address"
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "get_available_public_nfts": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_current_phase": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U8"
+        ]
+      },
+      "get_mint_price": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_minted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_nft_id": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaNFT",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_public_minted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_public_supply": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_remaining_nfts": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_ticket_minted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_ticket_supply": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      },
+      "get_total_supply": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          "U64"
+        ]
+      },
+      "is_minting_active": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_nft_minted": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "is_ticket_valid": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaTicket",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "mint_admin": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "transfer_policy",
+                "name": "TransferPolicy",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                      "module": "suiba_nft",
+                      "name": "SuibaNFT",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "Kiosk",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "KioskOwnerCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "Kiosk",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "KioskOwnerCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "mint_public": {
+        "visibility": "Private",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "transfer_policy",
+                "name": "TransferPolicy",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                      "module": "suiba_nft",
+                      "name": "SuibaNFT",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "random",
+                "name": "Random",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "Kiosk",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "KioskOwnerCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "mint_with_ticket": {
+        "visibility": "Private",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+              "module": "suiba_nft",
+              "name": "SuibaTicket",
+              "typeArguments": []
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "transfer_policy",
+                "name": "TransferPolicy",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                      "module": "suiba_nft",
+                      "name": "SuibaNFT",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "clock",
+                "name": "Clock",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "random",
+                "name": "Random",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "Kiosk",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "kiosk",
+                "name": "KioskOwnerCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "pause_minting": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "resume_minting": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": []
+      },
+      "set_bulk_nft_attributes": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "U64"
+          },
+          {
+            "Vector": {
+              "Vector": {
+                "Struct": {
+                  "address": "0x1",
+                  "module": "string",
+                  "name": "String",
+                  "typeArguments": []
+                }
+              }
+            }
+          },
+          {
+            "Vector": {
+              "Vector": {
+                "Struct": {
+                  "address": "0x1",
+                  "module": "string",
+                  "name": "String",
+                  "typeArguments": []
+                }
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "set_bulk_nft_urls": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": "U64"
+          },
+          {
+            "Vector": {
+              "Vector": "U8"
+            }
+          }
+        ],
+        "return": []
+      },
+      "set_minting_start": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": []
+      },
+      "set_nft_attributes": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "Vector": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Vector": {
+              "Struct": {
+                "address": "0x1",
+                "module": "string",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "set_nft_url": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x12fb2f7d2e38b93412786150d7babc661ce607c35cf8d3a71b2228957b94886f",
+                "module": "suiba_nft",
+                "name": "SuibaCollection",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "Vector": "U8"
+          }
+        ],
+        "return": []
+      }
+    }
+  }
+}
