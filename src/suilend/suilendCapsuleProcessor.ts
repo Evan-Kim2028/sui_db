@@ -27,7 +27,7 @@ export function initSuilendCapsuleProcessor() {
             nonrefundable_storage_fee: ctx.transaction.effects?.gasUsed.nonRefundableStorageFee,
             storage_rebate: ctx.transaction.effects?.gasUsed.storageRebate
         });
-    })
+    }, fetchConfig)
     .onEventAmounts((event, ctx) => {
         ctx.eventLogger.emit("suilend_capsule_amounts", {
             common: event.data_decoded.common.toString(),
