@@ -6,7 +6,7 @@ import { initSuilendPointsProcessor } from "./suilend/suilendPointsProcessor.js"
 import { initRootletProcessor } from "./nfts/rootletProcessor.js";
 import { initAfEggProcessor } from "./nfts/af_eggs.js";
 import { initMayaProcessor } from "./kriya/mayaProcessor.js";
-
+import { initMstableVaultProcessor } from "./mstable/vaultProcessor.js";
 initMayaProcessor();
 initSuilendMdropProcessor();
 initRootletProcessor();
@@ -14,3 +14,4 @@ initRootletProcessor();
 initSuilendMdropPackageProcessor();
 initSuilendCapsuleProcessor();
 initSuilendPointsProcessor();
+initMstableVaultProcessor();    
